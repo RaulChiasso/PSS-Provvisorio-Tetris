@@ -1,10 +1,13 @@
 package main;
 
+import java.awt.BasicStroke;
+import java.awt.Color;
 import java.awt.Graphics2D;
 
 public class PlayManager {
+    public static final int BORDER=4;
     
-    //Main Play Area
+    //Main PlayArea
     final int WIDTH=360;
     final int HEIGHT=600;
     public static int left_x;
@@ -26,6 +29,10 @@ public class PlayManager {
 
     public void draw(Graphics2D g2) {
 
+        //Draw PlayArea
+        g2.setColor(Color.white);
+        g2.setStroke(new BasicStroke(4f));
+        g2.drawRect(left_x-BORDER, top_y-BORDER, WIDTH+BORDER*2, HEIGHT+BORDER*2);
     }
         
 }
